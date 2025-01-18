@@ -10,7 +10,7 @@ import SearchMoviesContext from './context'
 
 import './App.css'
 
-const API_KEY = 'f32b79895b21468afbdd6d5342cbf3da'
+const API_KEY = '15e3a31a6a9a2c9c36b31f70dcfd6709'
 
 // write your code here
 const App = () => {

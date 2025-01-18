@@ -65,3 +65,13 @@
 .loader-container {
   height: 100vh;
 }
+.upcoming-bg {
+  background-color: rgb(33, 30, 40);
+  margin-top:0px;
+}
+.movies-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
