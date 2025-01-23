@@ -11,8 +11,8 @@ import './index.css'
 const SearchQuery = () => {
   const renderEmptyView = () => (
     <div className="empty-view-container">
-      <h1 className="no-results-heading">No results found.</h1>
-      <p className="no-results-para">Don't get worried, Try to search again.</p>
+      <h1>No results found.</h1>
+      <p>Don not get worried, Try to search again.</p>
     </div>
   )
 
@@ -23,7 +23,7 @@ const SearchQuery = () => {
       return renderEmptyView()
     }
     return (
-      <ul className="movies-list p-0 ms-0 me-0 mt-3">
+      <ul className="row p-0 ms-0 me-0 mt-3">
         {results.map(movie => (
           <MovieCard key={movie.id} movieDetails={movie} />
         ))}

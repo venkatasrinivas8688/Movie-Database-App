@@ -48,7 +48,7 @@ class Upcoming extends React.Component {
     const {results} = upcomingMovieResponse
 
     return (
-      <ul className="movies-list row p-0 ms-0 me-0 mt-3">
+      <ul className="row p-0 ms-0 me-0 mt-3">
         {results.map(movie => (
           <MovieCard key={movie.id} movieDetails={movie} />
         ))}
@@ -62,7 +62,7 @@ class Upcoming extends React.Component {
     return (
       <>
         <NavBar />
-        <div className="upcoming-bg route-page-body">
+        <div className="route-page-body">
           {isLoading
             ? this.renderLoadingView()
             : this.renderPopularMoviesList()}

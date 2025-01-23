@@ -6,17 +6,14 @@ const MovieCard = props => {
   const {id, title, posterPath, voteAverage} = movieDetails
 
   return (
-    <li className="movie-card-container col-12 col-sm-6 col-lg-2 mb-3 mt-3 d-flex flex-row">
+    <li className="movie-card-container col-12 col-sm-6 col-lg-2 mb-3 d-flex flex-column">
       <img className="movie-card-image" alt={title} src={posterPath} />
-      <div className="movie-description-card d-flex flex-column align-items-center mt-2">
+      <div className="d-flex flex-column justify-content-start mt-2">
         <h1 className="movie-title m-0">{title}</h1>
         <p className="movie-rating mb-0 ms-1">Rating: {voteAverage}</p>
       </div>
-      <Link to={`/movie/${id}`} className="mt-auto align-self-center">
-        <button
-          className="view-details-button btn btn-outline-success"
-          type="button"
-        >
+      <Link to={`/movie/${id}`} className="mt-auto align-self-start">
+        <button className="btn btn-outline-success" type="button">
           View Details
         </button>
       </Link>

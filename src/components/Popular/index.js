@@ -34,7 +34,6 @@ class Popular extends React.Component {
     const response = await fetch(apiUrl)
     const data = await response.json()
     const newData = this.getUpdatedData(data)
-    console.log(newData)
     this.setState({isLoading: false, popularMovieResponse: newData})
   }
 
@@ -49,7 +48,7 @@ class Popular extends React.Component {
     const {results} = popularMovieResponse
 
     return (
-      <ul className="movies-list p-0 mt-3">
+      <ul className="row p-0 ms-0 me-0 mt-3">
         {results.map(movie => (
           <MovieCard key={movie.id} movieDetails={movie} />
         ))}
@@ -61,7 +60,7 @@ class Popular extends React.Component {
     const {isLoading, popularMovieResponse} = this.state
 
     return (
-      <div className="home-page-container bg-white">
+      <>
         <NavBar />
         <div className="route-page-body">
           {isLoading
@@ -72,7 +71,7 @@ class Popular extends React.Component {
           totalPages={popularMovieResponse.totalPages}
           apiCallback={this.getPopularMoviesResponse}
         />
-      </div>
+      </>
     )
   }
 }

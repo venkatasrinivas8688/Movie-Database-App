@@ -48,7 +48,7 @@ class TopRated extends React.Component {
     const {results} = topRatedMovieResponse
 
     return (
-      <ul className="movies-list mt-3">
+      <ul className="row p-0 ms-0 me-0 mt-3">
         {results.map(movie => (
           <MovieCard key={movie.id} movieDetails={movie} />
         ))}
@@ -61,6 +61,7 @@ class TopRated extends React.Component {
 
     return (
       <>
+        {' '}
         <NavBar />
         <div className="route-page-body">
           {isLoading

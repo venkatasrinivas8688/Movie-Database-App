@@ -13,13 +13,14 @@ const NavBar = props => {
           onChangeSearchInput,
           searchInput,
         } = value
+
         const onChangeHandler = event => onChangeSearchInput(event.target.value)
 
         const onSearchHandler = event => {
           event.preventDefault()
           const {history} = props
           onTriggerSearchingQuery()
-          history.push('/search')
+          history.push(`/search`)
         }
 
         return (
@@ -32,7 +33,7 @@ const NavBar = props => {
               placeholder="Search"
             />
             <button
-              className="search-button btn btn-outline-info"
+              className="btn btn-outline-info"
               type="button"
               onClick={onSearchHandler}
             >

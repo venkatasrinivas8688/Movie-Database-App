@@ -1,7 +1,7 @@
-import {Component} from 'react'
+import React from 'react'
 import './index.css'
 
-class Pagination extends Component {
+class Pagination extends React.Component {
   state = {
     pageNo: 1,
   }
@@ -47,7 +47,7 @@ class Pagination extends Component {
     // const {totalPages} = this.props
 
     return (
-      <div className="pagination-btn-card mb-3 d-flex flex-row justify-content-center align-items-center">
+      <div className="mb-3 d-flex justify-content-center align-items-center">
         <button type="button" className="control-btn" onClick={this.onPrevPage}>
           Prev
         </button>
